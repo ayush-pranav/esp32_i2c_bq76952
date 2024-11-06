@@ -16,9 +16,6 @@ static uint8_t g_i2c_scl;
 
 static const char* TAG = "sw_i2c";
 
-/* https://esp-idf.readthedocs.io/en/latest/api-reference/peripherals/i2c.html#_CPPv211i2c_set_pin10i2c_port_tii13gpio_pullup_t13gpio_pullup_t10i2c_mode_t */
-
-/* esp_err_t i2c_set_pin(i2c_port_t i2c_num, int sda_io_num, int scl_io_num, gpio_pullup_t sda_pullup_en, gpio_pullup_t scl_pullup_en, i2c_mode_t mode) */
 esp_err_t sw_i2c_init(uint8_t sda, uint8_t scl)
 {
     ESP_LOGD(TAG, "Initializing software i2c with data pin %d.", sda);
